@@ -6,23 +6,15 @@ import EmployeesAddForm from '../employees-add-form/employees-add-form';
 
 import './app.css';
 
-function WhoAmI({name, surname, link}) {
-    return (
-        <div>
-            <h1>My name is {name()},  surname - {surname}</h1>
-            <a href={link}>My profile</a>
-        </div>
-    )
-}
+import { Component } from 'react';
 
 function App() {
-
     const data = [
-        {name:'Marty M.', salary: 3500, increase: false},
-        {name:'Daniel T.', salary: 2000, increase: true},
-        {name:'Sebastian M.', salary: 5000, increase: false},
-        {name:'Maxim K.', salary: 4000, increase: false},
-        {name:'Kaleb D.', salary: 3900, increase: true},
+        {name:'Marty M.', salary: 3500, increase: false, id: 1},
+        {name:'Daniel T.', salary: 2000, increase: true, id: 2},
+        {name:'Sebastian M.', salary: 5000, increase: false, id: 3},
+        {name:'Maxim K.', salary: 4000, increase: false, id: 4},
+        {name:'Kaleb D.', salary: 3900, increase: true, id: 5},
     ];
 
     return (
