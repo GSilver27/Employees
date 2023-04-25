@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import {Component} from 'react';
 
 import './employees-add-form.css';
 
@@ -19,6 +19,13 @@ class EmployeesAddForm extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
+        if (this.state.name.length < 2) {
+            alert('Имя должно быть больше 1 символа!');
+            return;
+        } else if (!this.state.salary) {
+            alert('Введите зарплату!');
+            return;
+        }
         this.props.onAdd(this.state.name, this.state.salary);
         this.setState({
             name: '',
