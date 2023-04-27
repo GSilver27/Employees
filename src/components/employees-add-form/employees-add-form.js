@@ -13,7 +13,7 @@ class EmployeesAddForm extends Component {
 
     onValueChange = (e) => {
         this.setState({
-            [e.target.name]: e.target.value // унивесальный обработчик двух инпутов
+            [e.target.name]: e.target.value // унивесальный обработчик двух инпутов; tricks
         })
     }
 
@@ -37,7 +37,7 @@ class EmployeesAddForm extends Component {
         const {name, salary} = this.state;
 
         return (
-            <div className="app-add-form">
+            <div className = "app-add-form">
                 <h3>Добавьте нового сотрудника</h3>
                 <form
                     className = "add-form d-flex"
@@ -53,7 +53,7 @@ class EmployeesAddForm extends Component {
                         placeholder = "З/П в $?"S
                         name = "salary"
                         value = {salary}
-                        onChange={this.onValueChange} />
+                        onChange = {this.onValueChange} />
                     <button type = "submit"
                         className = "btn btn-outline-light">Добавить</button>
                 </form>
